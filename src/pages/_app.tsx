@@ -61,6 +61,19 @@ function MyApp({ Component, pageProps }: AppProps) {
         }]}
       />
       <Head>
+        {/* Fonts */}
+        <link
+          rel="preload"
+          href="/fonts/Inter/Inter-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Inter/Inter-Bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
         {/* Favicons */}
         <link
           rel="icon"
