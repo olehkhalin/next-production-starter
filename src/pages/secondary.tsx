@@ -1,10 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { NextSeo } from 'next-seo';
 
 import { BaseLayout } from '@layouts/BaseLayout';
 import { Row } from '@components/ui/Row';
@@ -21,10 +21,14 @@ const Secondary: React.FC = () => {
     <BaseLayout>
       <Container>
         <Row className={s.row}>
-          <Head>
-            <title>{t('secondary:Secondary page')}</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+          <NextSeo
+            title={t('secondary:Secondary page')}
+            description={t('secondary:Secondary page description. Couple sentences...')}
+            openGraph={{
+              title: t('secondary:Secondary page'),
+              description: t('secondary:Secondary page description. Couple sentences...'),
+            }}
+          />
 
           <div className={s.main}>
             <h1 className={s.title}>

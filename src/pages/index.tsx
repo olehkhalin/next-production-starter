@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { NextSeo } from 'next-seo';
 
 import { BaseLayout } from '@layouts/BaseLayout';
 import { Row } from '@components/ui/Row';
@@ -19,6 +20,14 @@ const Home: React.FC = () => {
 
   return (
     <BaseLayout>
+      <NextSeo
+        title={t('secondary:Home page')}
+        description={t('secondary:Home page description. Couple sentences...')}
+        openGraph={{
+          title: t('secondary:Home page'),
+          description: t('secondary:Home page description. Couple sentences...'),
+        }}
+      />
       <Container>
         <Row className={s.row}>
           <Head>
