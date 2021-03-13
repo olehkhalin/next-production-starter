@@ -2,6 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 import Head from 'next/head';
 
+import LikeIcon from '@icons/Like.svg';
+
 import s from '@styles/Home.module.sass';
 
 export default function Home() {
@@ -14,6 +16,7 @@ export default function Home() {
 
       <main className={s.main}>
         <h1 className={s.title}>
+          <LikeIcon className={s.icon} />
           Welcome to
           {' '}
           <a href="https://nextjs.org">Next.js!</a>
