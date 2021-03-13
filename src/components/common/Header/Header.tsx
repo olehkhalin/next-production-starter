@@ -28,15 +28,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className={cx(s.root, className)}>
-      {content.map((navLink) => (
-        <HeaderLink
-          key={navLink.href}
-          href={navLink.href}
-          className={s.link}
-        >
-          {navLink.label}
-        </HeaderLink>
-      ))}
+      <nav>
+        {content.map((navLink) => (
+          <HeaderLink
+            key={navLink.href}
+            href={navLink.href}
+            className={s.link}
+          >
+            {navLink.label}
+          </HeaderLink>
+        ))}
+      </nav>
     </header>
   );
 };
