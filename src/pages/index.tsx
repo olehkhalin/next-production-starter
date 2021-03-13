@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   return (
     <BaseLayout>
       <Container>
-        <Row>
+        <Row className={s.row}>
           <Head>
             <title>{t('home:Create Next App')}</title>
             <link rel="icon" href="/favicon.ico" />
